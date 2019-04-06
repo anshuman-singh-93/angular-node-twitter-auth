@@ -8,7 +8,7 @@ const express = require('express');
 const session = require('express-session');
 const mongoose = require('./config/mongoose');
 const cors = require('cors');
-const passport = require('./config/passport');
+const passport = require('passport');
 const CONSTANTS = require('./config/constants')
 const app =  express();
 app.listen = promisify(app.listen);
@@ -33,10 +33,15 @@ const initializeMiddlware = ()=>{
         saveUninitialized: true,
         cookie: { secure: false }
       }))
+
+      // initialize passport strategy
+      require('./config/passport-strategy')
     
 // required for passport
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
+
+
 console.info(`All Middleware has been registered`)
 
 }

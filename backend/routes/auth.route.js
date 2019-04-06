@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const passport = require('../config/passport');
+const passport = require('passport');
 const CONSTANT = require('../config/constants')
 
 

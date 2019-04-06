@@ -1,0 +1,45 @@
+<app-header [profile_image_url]=user?.profile_image_url [name]="user?.name"></app-header>
+
+<div class="wrapper">
+  
+    <mat-tab-group>
+        <mat-tab label="ALL">
+          <div fxLayout="row wrap" fxLayoutGap="10px" style="margin-top: 20px;">
+            <div *ngFor="let i of [1,2,3]" style="margin-bottom: 20px;" >
+                <app-course [name]="user?.name" [screen_name]="user?.screen_name"></app-course>
+
+            </div>
+
+          </div>
+        </mat-tab>
+        <mat-tab label="Published">
+            <div fxLayout="row wrap" fxLayoutGap="10px" style="margin-top: 20px;">
+                <div *ngFor="let i of [1,2]" style="margin-bottom: 20px;" >
+                    <app-course [name]="user?.name" [screen_name]="user?.screen_name"></app-course>
+    
+                </div>
+    
+              </div>  
+        
+        </mat-tab>
+        <mat-tab label="Draft"> 
+            <div fxLayout="row wrap" fxLayoutGap="10px" style="margin-top: 20px;">
+                <div *ngFor="let i of [1,2,3,4]" style="margin-bottom: 20px;" >
+                    <app-course [name]="user?.name" [screen_name]="user?.screen_name"></app-course>
+    
+                </div>
+    
+              </div>  
+        </mat-tab>
+        <mat-tab label="Archived">
+            <div fxLayout="row wrap" fxLayoutGap="10px" style="margin-top: 20px;">
+                <div *ngFor="let i of [1,2,3,4,5]" style="margin-bottom: 20px;" >
+                    <app-course [name]="user?.name" [screen_name]="user?.screen_name"></app-course>
+    
+                </div>
+    
+              </div>  
+        </mat-tab>
+  
+      </mat-tab-group>
+</div>

@@ -1,0 +1,31 @@
+<mat-toolbar   class="elevation">
+    <mat-toolbar-row>
+
+        <div fxFlex>
+            <h2>Courses</h2>
+
+        </div>
+
+        <div fxFlex>
+          <div fxLayoutAlign="end center" >
+              <mat-icon svgIcon="thumbs-up"></mat-icon>
+
+              <span><img  [src]="profile_image_url"  style="width:30px;border-radius:50%;position: relative;top:5px"> </span>
+              <span  style="font-size: 14px;margin-left: 10px;text-transform: capitalize">{{name}}</span>
+
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="onLogout()">
+                      <mat-icon>logout</mat-icon>
+                      <span>Logout</span>
+                    </button>
+                   
+                  </mat-menu>
+                  
+          </div>
+
+        </div>
+    </mat-toolbar-row>
+    </mat-toolbar>

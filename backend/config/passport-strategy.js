@@ -16,6 +16,7 @@ passport.use(new TwitterStrategy({
         callbackURL: CONSTANTS.TWITTER_CALLBACK_URL
     },
     async (token, tokenSecret, profile, done) => {
+        console.log(token,tokenSecret)
         let _id = profile._json.id;
         console.log(profile._json.profile_image_url)
         _id = mongoose.Types.ObjectId(_id);

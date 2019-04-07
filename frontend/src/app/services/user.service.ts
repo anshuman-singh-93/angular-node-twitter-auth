@@ -32,6 +32,10 @@ export class UserService {
     return this.http.get(`${environment.apiEndpoint}/user/me`);
   };
 
+  getFollower(){
+    return this.http.get(`${environment.apiEndpoint}/user/me/followers`);
+  };
+
 
   logout(){
     localStorage.removeItem('jwt')

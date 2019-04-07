@@ -11,6 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatTabsModule, MatSidenavModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatListModule} from '@angular/material/list';
 
 
 // import services and guards
@@ -41,6 +42,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserAnimationsModule,
     HttpClientModule,
     MatMenuModule,
+    MatListModule,
     AppRoutingModule,
     MatButtonModule,
     MatCardModule,
